@@ -11,28 +11,28 @@
     <img src="calc.png" alt="calc.png" class="toggle" onclick="toggle()">
     <span class="off" id="calc">
     <div class="grid-container">
-        <div class="felso"><span class="bal">Calculator</span>  <span class="jobb"> <span class="min" onclick="minimize()">_</span>  <span class="max" onclick="maximize()">🗖</span>  <span class="close" onclick="close()">×</span></span></div>
+        <div class="felso"><span class="bal">Calculator</span>  <span class="jobb"> <span class="min" onclick="minimize()">_</span>  <span class="max" onclick="maximize()">🗖</span><span class="close" onclick="bezar()">×</span></span></div>
         <div class="felso"><span class="display" id="display"></span></div>
         <div class="felso"><span class="input" id="input">0</span></div>
-        <div class="grid-item szurk" onclick="clear()">C</div>
-        <div class="grid-item szurk" onclick="fullclear()">CE</div>
-        <div class="grid-item szurk" onclick="muvelet()">X<sup>2</sup></div>
-        <div class="grid-item szurk" onclick="muvelet()">÷</div>
+        <div class="grid-item szurk" onclick="fullclear('')">C</div>
+        <div class="grid-item szurk" onclick="torles('')">CE</div>
+        <div class="grid-item szurk" onclick="sqr('')">X<sup>2</sup></div>
+        <div class="grid-item szurk" onclick="muvelet('÷',false)">÷</div>
         <div class="grid-item fek" onclick="szam(7)">7</div>
         <div class="grid-item fek" onclick="szam(8)">8</div>
         <div class="grid-item fek" onclick="szam(9)">9</div>
-        <div class="grid-item szurk" onclick="muvelet()">×</div>
+        <div class="grid-item szurk" onclick="muvelet('×',false)">×</div>
         <div class="grid-item fek" onclick="szam(4)">4</div>
         <div class="grid-item fek" onclick="szam(5)">5</div>
         <div class="grid-item fek" onclick="szam(6)">6</div>
-        <div class="grid-item szurk" onclick="muvelet()">-</div>
+        <div class="grid-item szurk" onclick="muvelet('-',false)">-</div>
         <div class="grid-item fek" onclick="szam(1)">1</div>
         <div class="grid-item fek" onclick="szam(2)">2</div>
         <div class="grid-item fek" onclick="szam(3)">3</div>
-        <div class="grid-item szurk" onclick="muvelet()">+</div>
-        <div class="grid-item fek" onclick="muvelet()">±</div>
+        <div class="grid-item szurk" onclick="muvelet('+',false)">+</div>
+        <div class="grid-item fek" onclick="plusminus()">±</div>
         <div class="grid-item fek" onclick="szam(0)">0</div>
-        <div class="grid-item fek" onclick="muvelet()">.</div>
+        <div class="grid-item fek" onclick="tiz()">.</div>
         <div class="grid-item egyen" onclick="szamol()">=</div>
       </div>
       </span>
