@@ -29,17 +29,14 @@ function szam(number){
 }
 function muvelet(muvelet,veg){
     szamolas=parseFloat(input);
-//    if(display.slice(-1)=="+"||display.slice(-1)=="-"||display.slice(-1)=="÷"||display.slice(-1)=="×"){
-//        if(muvelet=="+"||muvelet=="-"||muvelet=="÷"||muvelet=="×")
- //       display = display.substring(0, display.length - 1);    }
- //   else{
+    eredmeny=parseFloat(eredmeny);
+
     if(muvelet=="+"){
         eredmeny=eredmeny+szamolas;
     }
     else if(muvelet=="-"){
         if(eredmeny==0){
             eredmeny=szamolas;
-            console.log("asd")
         }
         else{
         eredmeny=eredmeny-szamolas;
@@ -48,7 +45,7 @@ function muvelet(muvelet,veg){
 
     }
     else if(muvelet=="÷"){
-        eredmeny=eredmeny/szamolas;
+        eredmeny=eredmeny / szamolas;
     }
     else if(muvelet=="×"){
         if(eredmeny==0){
@@ -67,7 +64,6 @@ function muvelet(muvelet,veg){
 document.getElementById("display").innerHTML=display;
 input=eredmeny
     input="";
-//}
 }
 function torles(){
     document.getElementById("input").innerHTML=""
@@ -105,5 +101,91 @@ function szamol(){
     display="";
     
 }
+function tiz(){
+    input=input+"."
+}
+function style(id,szin,origin){
+    document.getElementById(id).className=szin;
+    setTimeout(() => {
+        document.getElementById(id).className=origin;
+      }, 300);
+}
+       
+document.onkeydown = check;
+function check(e){
+    if(e.keyCode==8){
+        torles();
+        style("c",'grid-item click','grid-item szurk');
+    }
+    if(e.keyCode==46){
+        fullclear();
+        style("ce",'grid-item click','grid-item szurk');
+    }
+    if(e.keyCode==96){
+        szam(0);
+        style("0",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==97){
+        szam(1);
+        style("1",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==98){
+        szam(2);
+        style("2",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==99){
+        szam(3);
+        style("3",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==100){
+        szam(4);
+        style("4",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==101){
+        szam(5);
+        style("5",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==102){
+        szam(6);
+        style("6",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==103){
+        szam(7);
+        style("7",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==104){
+        szam(8);
+        style("8",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==105){
+        szam(9);
+        style("9",'grid-item click','grid-item fek')
+    }
+    if(e.keyCode==111){
+        muvelet('÷',false);
+        style("div",'grid-item click','grid-item szurk');
+    }
+    if(e.keyCode==106){
+        muvelet('×',false);
+        style("mul",'grid-item click','grid-item szurk');
+    }
+    if(e.keyCode==109){
+        muvelet('-',false);
+        style("min",'grid-item click','grid-item szurk');
+    }
+    if(e.keyCode==107){
+        muvelet('+',false);
+        style("plus",'grid-item click','grid-item szurk');
+    }
+    if(e.keyCode==110){
+        tiz();
+    }
+    if(e.keyCode==13){
+        szamol();
+        style("egyen",'grid-item egyen2','grid-item egyen')
+
+    }
+}
+
 
 

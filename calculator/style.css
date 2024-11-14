@@ -42,18 +42,30 @@ cursor: pointer;
 .szurk{
     background-color: rgb(80, 80, 80);
 }
+.click{
+    background-color: gray;
+}
 .szurk:hover, .fek:hover, .max:hover, .min:hover{
     background-color: rgb(100, 100, 100);
 }
+.szurk:active, .fek:active, .max:active, .min:active{
+    background-color:gray ;
+}
+
 .fek{
     background-color: rgb(60, 60, 60);
+}
+.fek2{
+    background-color: rgb(60, 60, 60);;
 }
 .egyen{
     background-color: rgb(0,139,139);
 }
 .egyen:hover{
     background-color: rgb(0,255,255);
-
+}
+.egyen2{
+    background-color: rgb(196, 248, 253);
 }
 img{
     cursor: pointer;
